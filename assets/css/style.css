@@ -17,13 +17,8 @@ header {
 }
 
 h2 {
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 32px;
-    text-align: center;
-}
-
-.small_components {
-    line-height: 200%;
 }
 
 footer {
