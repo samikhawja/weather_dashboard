@@ -21,17 +21,98 @@
     
     <body>
         <header>
-            
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">Weather Dashboard</h1>
+                </div>
+            </div>
         </header>
 
 
         <main>
-            
+            <div class="container">
+                <div class="row bg-light">
+                    <div class="input-group">
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                        aria-describedby="search-addon" />
+                        <button type="button" class="btn btn-outline-primary">search</button>
+                    </div>
+                    <nav class="justify-content-center navbar navbar-light">
+                        <form class="form-inline">
+                            <button class="btn btn-outline-secondary" onclick="myFunction()">Smaller button</button>
+                            <button class="btn btn-outline-secondary" onclick="myFunction()">Smaller button</button>
+                            <button class="btn btn-outline-secondary" onclick="myFunction()">Smaller button</button>
+                            <button class="btn btn-outline-secondary" onclick="myFunction()">Smaller button</button>
+                            <button class="btn btn-outline-secondary" onclick="myFunction()">Smaller button</button>
+                            <button class="btn btn-outline-secondary" onclick="myFunction()">Smaller button</button>
+                            <button class="btn btn-outline-secondary" onclick="myFunction()">Smaller button</button>
+                        </form>
+                    </nav>
+                </div>
+                
+                <hr>
+                <div class="card maincard" style="width: 100;">
+                    <div class="card-header city_date">
+                        <h1 id="date"></h1>
+                    </div>
+                    <ul class="list-group list-group-flush components">
+                        <li class="temperature">Temperature: </li>
+                        <li class="humidity">Humidity: </li>
+                        <li class="wind_speed">Wind Speed: </li>
+                        <li class="uv_index">UV Index: </li>
+                    </ul>
+                </div>
+
+                <br>
+                <h2>5-Day Forecast</h2>
+                <div class="row">
+                    <div class="col card">
+                        <ul class="list-group list-group-flush small_components">
+                            <h3 id="date"></h3>
+                            <li id="symbol">symbol</li>
+                            <li id="temp">Temp: </li>
+                            <li id="humidity">Humidity: </li>
+                        </ul>
+                    </div>
+                    <div class="col card">
+                        <ul class="list-group list-group-flush small_components">
+                            <h3 id="date"></h3>
+                            <li id="symbol">symbol</li>
+                            <li id="temp">Temp: </li>
+                            <li id="humidity">Humidity: </li>
+                        </ul>
+                    </div>
+                    <div class="col card">
+                        <ul class="list-group list-group-flush small_components">
+                            <h3 id="date"></h3>
+                            <li id="symbol">symbol</li>
+                            <li id="temp">Temp: </li>
+                            <li id="humidity">Humidity: </li>
+                        </ul>
+                    </div>
+                    <div class="col card">
+                        <ul class="list-group list-group-flush small_components">
+                            <h3 id="date"></h3>
+                            <li id="symbol">symbol</li>
+                            <li id="temp">Temp: </li>
+                            <li id="humidity">Humidity: </li>
+                        </ul>
+                    </div>
+                    <div class="col card">
+                        <ul class="list-group list-group-flush small_components">
+                            <h3 id="date"></h3>
+                            <li id="symbol">symbol</li>
+                            <li id="temp">Temp: </li>
+                            <li id="humidity">Humidity: </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </main>
 
-
+        <br>
         <footer>
-
+            <h4>Created by SK#15</h4>
         </footer>
         
         <!-- connect bootstrap, js and momentJS -->
