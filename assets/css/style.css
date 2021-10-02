@@ -4,7 +4,7 @@ header {
     text-align: center;
 }
 
-.maincard {
+#maincard {
     line-height: 200%;
     font-weight: bold;
     font-size: 45px;
