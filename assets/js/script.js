@@ -1,6 +1,13 @@
 var city = ""
 var APIKey="01ba57fd295b828746a188dea79c4db5"
 
+function displayWeather(event){
+    event.preventDefault();
+    if(searchCity.val().trim()!==""){
+        city=searchCity.val().trim();
+        currentWeather(city);
+    }
+}
 
 function presentCity(city){
     city = $("#city_search").val()
@@ -15,7 +22,6 @@ function presentCity(city){
         var icon = response.weather[0].icon;
         var iconImage = "<img src= 'https://openweathermap.org/img/w/" + icon + ".png'/>"
         $(".city-name").html(" " + cityN + " (" + date + ") " + iconImage)
-        console.log(iconImage)
         var temp = Math.round((response.main.temp - 273.15) * 1.8 + 32);
         $("#temperature").text(" " + temp + "°F")
         var humd = (response.main.humidity);
@@ -44,27 +50,31 @@ function presentCity(city){
         })
 
     })
+}
 
-
-    // function forecast(city){
-        // var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=" + APIKey;
-        // $.ajax({
-        //     url : forecastURL,
-        //     method : "GET",
-        // }).then(function(response){
-        //     console.log(response)
-        //     for (i=0; i<5; i++) {
-                
-        //         var dt = ((response.list[((i+1)*8)-1].dt) * 1000);
-        //         var date = new Date(dt)
-        //         var dateFormat = date.toLocaleString
-        //         $("#date1").text(dateFormat)
-        //         console.log(dateFormat)
-        //     }
-        // })
-    // }
+function forecast(city){
+    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey;
+    $.ajax({
+        url : forecastURL,
+        method : "GET",
+    }).then(function(response){
+        console.log(response)
+        for (i=0; i<5; i++) {
+            var date= new Date((response.list[((i+1)*8)-1].dt)*1000).toLocaleDateString();
+            var siconimg = response.list[((i+1)*8)-1].weather[0].icon;
+            var sicon = "<img src= 'https://openweathermap.org/img/w/" + siconimg + ".png'/>";
+            var stempk = response.list[((i+1)*8)-1].main.temp;
+            var stemp =(((stempk-273.5)*1.80)+32).toFixed(2);
+            var shumd = response.list[((i+1)*8)-1].main.humidity;
+        
+            $("#date"+i).text(date);
+            $("#symbol"+i).html(sicon);
+            $("#temp"+i).text(stemp+"°F");
+            $("#humidity"+i).text(shumd+"%");
+            console.log(forecastURL)
+        }
+    });
 }
 
 
-
-$("#sbutton").on("click", presentCity)
+$("#sbutton").on("click", presentCity);
