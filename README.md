@@ -27,7 +27,7 @@
 
 <img src="./assets/images/webpage.png" alt="Weather Dashboard Webpage">
 
-For this assignment, I had to create a day planner from scratch. Nothing was provided, so this was a true test to my knowledge and what I've learned so far. For this planner, it need to be updated every second witht the correct time and date or unless the JS wouldn't work. I creates fields by the hour, 9am-5pm, where you can save things to do with the appropiate time and save it. The field will turn white when that time has passed for the day. Of course, making this planner wasn't easy. It tested my previous knowledge and I was constantly researching to ensure I had the best planner I could deliver to the user!
+For this assignment, I had to create a weather dashbaord from scratch. Nothing was provided, so this was a true test to my knowledge and what I've learned so far. For this dashbaord, it needed a search field to recieve the weather for the location. The dashboard displays, location with date and icon, temperature, humidity, wind speeds and a color-coded UV Index. It tested my previous knowledge and I was constantly researching to ensure I had the best weather dashbaord I could deliver to the user!
 
 The websites I used to help create my day planner are listed below in the <a href="#acknowledgements">acknowledgements</a>.
 
