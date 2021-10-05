@@ -39,13 +39,13 @@ I used <a href="https://code.visualstudio.com/">Visual Studio Code</a> to create
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This webpage is up-to-date every second with the time and date and will allow you to create a day plan by the hour. You can add in each text field, with the appropiate, hour and save it with localStorage. Depending on what time it is, if the hour box is white, that mean that time has passed.
+This webpage is up-to-date every second with the time and date and will allow you to to see the current weather. You can change the location through the search bar and clicking search. Depending on what the UV Index is, an appropiate color will display for the UV Index.
 
 
 <!-- USAGE EXAMPLES -->
 ## Code Snippet
 
-While coding this day planner, this piece of code / function proved to be the hardest to figure out. I had to create a function that would first display military time in order to compare it with my time slots and turn those strings into numbers with parse! I then had to create an if statement in order to change the colors of the time slots depending on the current time of day. This part of the javascript wasn't easy but it was fun because of the challenge!
+While coding this weather dashbaord, this piece of code / function proved to be the hardest to figure out. I had to create different variables that would all go into one '$' and creating an 'img' tag was the hardest. It was the hardest because my webpage would display the link rather than the icon and i was through trial and error, I found out the correct formation. This part of the javascript wasn't easy but it was fun because of the challenge!
 ```
 var cityN = city.toUpperCase()
 var date = new Date(response.dt*1000).toLocaleDateString();
