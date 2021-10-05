@@ -47,19 +47,11 @@ This webpage is up-to-date every second with the time and date and will allow yo
 
 While coding this day planner, this piece of code / function proved to be the hardest to figure out. I had to create a function that would first display military time in order to compare it with my time slots and turn those strings into numbers with parse! I then had to create an if statement in order to change the colors of the time slots depending on the current time of day. This part of the javascript wasn't easy but it was fun because of the challenge!
 ```
-function timeSlots() {
-    var time = parseInt(moment().format("k"))
-    $(".col-12").each(function(){
-        var timeSlot = parseInt($(this).attr("id"))
-        if(time > timeSlot) {
-            $(this).addClass("future")
-        }else if(time == timeSlot) {
-            $(this).addClass("present")
-        }else {
-            $(this).addClass("past")
-        }
-    })
-}
+var cityN = city.toUpperCase()
+var date = new Date(response.dt*1000).toLocaleDateString();
+var icon = response.weather[0].icon;
+var iconImage = "<img src= 'https://openweathermap.org/img/w/" + icon + ".png'/>"
+$(".city-name").html(" " + cityN + " (" + date + ") " + iconImage)
 ```
 
 
@@ -76,9 +68,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Sami Khawja - Skhawja11@gmail.com
 
-Project Link: [GitHub](https://github.com/samikhawja/day_planner)
+Project Link: [GitHub](https://github.com/samikhawja/weather_dashboard)
 
-Live Link: [Password Generator](https://samikhawja.github.io/day_planner/)
+Live Link: [Weather Dashboard](https://samikhawja.github.io/weather_dashboard/)
 
 
 
